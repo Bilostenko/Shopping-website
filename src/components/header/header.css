@@ -1,3 +1,24 @@
-.header{
-  color: blue;
+.header {
+  padding: 46px 0 56px;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+}
+
+.header__logo>span {
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 0.03em;
+  line-height: 60px;
 }
