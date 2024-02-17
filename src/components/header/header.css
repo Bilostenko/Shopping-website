@@ -1,3 +1,11 @@
+:root {
+  --textColor: #000;
+  --yellow: #EBD96B;
+}
+
+body{
+  color: var(--textColor);
+}
 .header {
   padding: 46px 0 56px;
 }
@@ -21,4 +29,24 @@
   font-size: 40px;
   letter-spacing: 0.03em;
   line-height: 60px;
+  text-transform: uppercase;
+}
+
+.header__nav{
+  display: flex;
+  font-size: 22px;
+  font-style: medium;
+}
+
+.header__nav>ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 65px;
+  align-items: center;
+}
+
+.header__nav>ul>li>a{
+  color: var(--textColor);
+  text-decoration: none;
 }
