@@ -33,20 +33,32 @@ body{
 }
 
 .header__nav{
-  display: flex;
   font-size: 22px;
-  font-style: medium;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 .header__nav>ul{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 65px;
+  column-gap: 65px;
   align-items: center;
 }
 
 .header__nav>ul>li>a{
   color: var(--textColor);
   text-decoration: none;
+}
+
+.header__nav-sign{
+  padding: 13px 22px;
+  background-color: black;
+  border-radius: 7px;
+  color: white !important;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
 }
