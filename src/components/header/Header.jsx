@@ -16,7 +16,7 @@ function Header() {
               <li><a href="!#">FASHION</a></li>
               <li><a href="!#">FAVOURITE</a></li>
               <li><a href="!#">LIFESTYLE</a></li>
-              <li><a href="!#" className='header__nav-sign'>SIGN UP</a></li>
+              <li><a href="!#" className='header__nav-sign btn'>SIGN UP</a></li>
             </ul>
           </nav>
         </div>

@@ -52,7 +52,7 @@ body{
   text-decoration: none;
 }
 
-.header__nav-sign{
+.header__nav-sign, .btn{
   padding: 13px 22px;
   background-color: black;
   border-radius: 7px;
