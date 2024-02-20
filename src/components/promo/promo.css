@@ -1,5 +1,6 @@
 :root {
   --textColor: #000;
+  --yellow: #EBD96B;
 }
 
 .promo {
@@ -16,13 +17,39 @@
 }
 
 .promo__title {
-  color: --textColor;
   font-size: 96px;
   line-height: calc(120 / 96);
   font-weight: 900;
+  max-width: 480px;
 }
 
-.promo__desc{
+.promo__title-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.promo__title-highlight span {
+  position: relative;
+  z-index: 1;
+}
+.highlight--yellow::before{
+background-color: var(--yellow) !important;
+right: -110px !important;
+}
+
+.promo__title-highlight::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  top: -12px;
+  bottom: 0px;
+  left: -40px;
+  right: -160px;
+  transform: rotate(-2deg);
+}
+
+.promo__desc {
   color: --textColor;
   font-size: 32px;
   font-weight: 400;
@@ -35,10 +62,18 @@
 .promo__btn_wrapper {
   display: flex;
   align-items: center;
-  gap: 34px;
+  column-gap: 34px;
 }
 
-.promo__btn{
+.promo__btn_wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 190px;
+  height: 32px;
+  background-image: url('./../../img/icons/decor-yellow.svg');
+}
+
+.promo__btn {
   border-radius: 10px;
   text-decoration: none;
   padding: 19px 40px;
@@ -46,5 +81,3 @@
   line-height: 1.5;
   font-weight: 500;
 }
-
-/* 1:19:30 */

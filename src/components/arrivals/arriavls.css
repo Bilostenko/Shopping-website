@@ -1,0 +1,20 @@
+.title2{
+  position: relative;
+}
+.title2::after{
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 192px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-image: url('../../img/icons/decor-yellow.svg');
+}
+
+.arrivals__content{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 1.59 */
