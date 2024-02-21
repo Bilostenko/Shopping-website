@@ -1,6 +1,7 @@
 .brands{
   padding: 60px 0 55px;
   background-color: var(--yellow);
+  margin-bottom: 120px;
 }
 
 .brands__list{
