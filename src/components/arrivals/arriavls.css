@@ -1,4 +1,4 @@
-.title2{
+.title2 {
   position: relative;
   display: inline-block;
   margin-bottom: 100px;
@@ -6,7 +6,8 @@
   letter-spacing: 0.06em;
   font-weight: bold;
 }
-.title2::after{
+
+.title2::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -18,9 +19,5 @@
   background-image: url('../../img/icons/decor-yellow.svg');
 }
 
-.arrivals__content{
-  display: flex;
-  justify-content: space-between;
-}
 
-/* 2.08 */
+

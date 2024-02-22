@@ -1,10 +1,17 @@
-body{
+:root{
+  --gray: #7F7F7F;
+  --textColor: #000;
+  --yellow: #EBD96B;
+}
+
+body {
   font-family: "poppins", sans-serif;
 }
 
-.container{
+.container {
   /* background-color: red; */
-   max-width: 1780px; /*(1720px + 30px * 2) */
+  max-width: 1780px;
+  /*(1720px + 30px * 2) */
   margin: 0 auto;
   padding: 0 30px;
 }
