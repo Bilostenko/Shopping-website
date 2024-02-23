@@ -1,3 +1,7 @@
+.arrivals{
+  margin-bottom: 143px;
+}
+
 .title2 {
   position: relative;
   display: inline-block;
@@ -19,5 +23,9 @@
   background-image: url('../../img/icons/decor-yellow.svg');
 }
 
+.arrivals__content {
+  display: flex;
+  justify-content: space-between;
+}
 
 

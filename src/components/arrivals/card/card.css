@@ -1,7 +1,4 @@
-.arrivals__content {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .arrivals__card-img {
   border-radius: 20px;

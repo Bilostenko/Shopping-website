@@ -1,6 +1,7 @@
 import Arrivals from './components/arrivals/Arrivals';
 import Brands from './components/brands/Brands';
 import Header from './components/header/Header';
+import Payday from './components/payday/Payday';
 import Promo from './components/promo/Promo';
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Promo />
       <Brands />
       <Arrivals />
+      <Payday />
     </div>
   );
 }
