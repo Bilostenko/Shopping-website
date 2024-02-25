@@ -1,6 +1,6 @@
 // sfc
 import './promo.css'
-import promoImg from './../../img/images/header-img.jpg'
+import headerImg from './../../img/images/header-img.jpg'
 
 const Promo = () => {
   return (
@@ -23,7 +23,7 @@ const Promo = () => {
             </div>
           </div>
           <div className="promo__IMG">
-            <img src={promoImg} alt="promo" />
+            <img src={headerImg} alt="promo" />
           </div>
         </div>
       </div>
