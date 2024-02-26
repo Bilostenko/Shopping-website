@@ -12,18 +12,19 @@ const Payday = () => {
             <div className="payday__title">
               <span className='payday__title-highlight'>
                 <span>PAYDAY</span>
-                SALE NOW
               </span>
+              SALE NOW
               <div className="payday__desc-1">Spend minimal $100 get 30% off
                 voucher code for your next purchase</div>
               <div className="payday__desc-2">
-                <span> 1 June - 10 June 2021</span>
+                <span> 1 June - 10 June 2021</span> <br />
                 *Terms & Conditions apply</div>
             </div>
+            <div className="payday__btn_wrapper">
+              <a href="!#" className='btn payday__btn'>Shop Now</a>
+            </div>
           </div>
-          <div className="payday__btn_wrapper">
-            <a href="!#" className='btn payday__btn'>Shop Now</a>
-          </div>
+
         </div>
       </div>
     </section>

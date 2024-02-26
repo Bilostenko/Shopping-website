@@ -8,8 +8,11 @@ body {
   font-family: "poppins", sans-serif;
 }
 
+.btn{
+  text-decoration: none;
+}
 .container {
-  /* background-color: red; */
+  background-color: red;
   max-width: 1780px;
   /*(1720px + 30px * 2) */
   margin: 0 auto;

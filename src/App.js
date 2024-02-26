@@ -11,6 +11,7 @@ function App() {
       <Brands />
       <Arrivals />
       <Payday />
+      <Arrivals />
     </div>
   );
 }
