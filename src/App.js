@@ -1,6 +1,7 @@
 import Arrivals from './components/arrivals/Arrivals';
 import Brands from './components/brands/Brands';
 import Header from './components/header/Header';
+import MobileApp from './components/mobileApp/MobileApp';
 import Payday from './components/payday/Payday';
 import Promo from './components/promo/Promo';
 
@@ -32,6 +33,7 @@ function App() {
           { titleCard: "All Under $40", img: OneGirl },
         ]}
       />
+      <MobileApp />
     </div>
   );
 }

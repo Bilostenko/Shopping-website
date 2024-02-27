@@ -2,6 +2,10 @@
   margin-bottom: 143px;
 }
 
+.arrivals__content{
+  flex-wrap: wrap;
+}
+
 .title2 {
   position: relative;
   display: inline-block;

@@ -24,7 +24,6 @@ const Payday = () => {
               <a href="!#" className='btn payday__btn'>Shop Now</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
