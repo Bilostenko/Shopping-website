@@ -1,5 +1,7 @@
 import Arrivals from './components/arrivals/Arrivals';
 import Brands from './components/brands/Brands';
+import Feedback from './components/feedback/Feedback';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import MobileApp from './components/mobileApp/MobileApp';
 import Payday from './components/payday/Payday';
@@ -34,6 +36,8 @@ function App() {
         ]}
       />
       <MobileApp />
+      < Feedback />
+      < Footer />
     </div>
   );
 }
