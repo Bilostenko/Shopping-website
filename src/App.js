@@ -26,6 +26,7 @@ function App() {
           { titleCard: "Coats & Parkas", img: Coats },
           { titleCard: "Tees & T-Shirt", img: Tshirt }
         ]}
+        animationParams={{ rotation: 360, duration: 2, ease: 'power2.inOut' }}
       />
       <Payday />
       <Arrivals
@@ -34,6 +35,7 @@ function App() {
           { titleCard: "Trending on instagram", img: TwoGirls },
           { titleCard: "All Under $40", img: OneGirl },
         ]}
+        animationParams={{ rotation: 360, duration: 2, ease: 'power2.inOut' }}
       />
       <MobileApp />
       < Feedback />

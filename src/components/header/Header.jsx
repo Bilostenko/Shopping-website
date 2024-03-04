@@ -2,32 +2,23 @@ import './header.css'
 import logoIMG from '../../img/icons/logo.svg'
 
 import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect } from 'react';
 
 
 function Header() {
 
-  const timeline = gsap.timeline({
-    repeat: false,
-    defaults: {duration:1, ease: "easeInOut"}
-  });
-  const logoRef = useRef();
-
-  useEffect(() => {
-    timeline.from(logoRef.current, {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      delay: 1
+  useLayoutEffect(() => {
+    gsap.to('.header__logo', {
+      rotation: 360
     })
-  }, []);
+  }, [])
 
 
   return (
     <header className='header'>
       <div className="container">
         <div className="header__row">
-          <div className="header__logo" ref={logoRef}>
+          <div className="header__logo">
             <img src={logoIMG} alt="logo" />
             <span>FASHION</span>
           </div>
