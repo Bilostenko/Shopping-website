@@ -9,28 +9,31 @@ const Arrivals = ({ title, cardData, animationParams }) => {
 
   useEffect(() => {
     const arrivalsElement = arrivalsRef.current;
-    
-
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           if (animationParams) {
-            gsap.to(arrivalsElement, animationParams);
+            gsap.from(arrivalsElement, {
+              ...animationParams,
+              delay: 0.5
+            });
           }
         }
       });
     });
-
+  
     if (arrivalsElement) {
       observer.observe(arrivalsElement);
     }
-
+  
     return () => {
       if (arrivalsElement) {
         observer.unobserve(arrivalsElement);
       }
     };
   }, [animationParams]);
+  
 
 
   return (

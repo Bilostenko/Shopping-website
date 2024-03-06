@@ -1,21 +1,51 @@
-import './header.css'
-import logoIMG from '../../img/icons/logo.svg'
-
+import React, { useEffect, useRef } from 'react';
+import './header.css';
+import logoIMG from '../../img/icons/logo.svg';
 import gsap from 'gsap';
-import { useLayoutEffect } from 'react';
-
 
 function Header() {
+  const headerRef = useRef(null);
 
-  useLayoutEffect(() => {
-    gsap.to('.header__logo', {
-      rotation: 360
-    })
-  }, [])
+  useEffect(() => {
+    const headerElement = headerRef.current;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          gsap.from('.header__logo img', {
+            opacity: 0,
+            x: -50,
+            delay: 0.5
+          });
+          gsap.from('.header__nav', {
+            opacity: 0,
+            x: 50,
+            delay: 0.5
+          });
+          gsap.fromTo(
+            '.header__logo',
+            { scale: 0.8 }, 
+            { duration: 1, scale: 1, ease: 'power3.out' }
+          );
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (headerElement) {
+      observer.observe(headerElement);
+    }
+
+    return () => {
+      if (headerElement) {
+        observer.unobserve(headerElement);
+      }
+    };
+  }, []);
 
 
   return (
-    <header className='header'>
+    <header className='header' ref={headerRef}>
       <div className="container">
         <div className="header__row">
           <div className="header__logo">
@@ -37,4 +67,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

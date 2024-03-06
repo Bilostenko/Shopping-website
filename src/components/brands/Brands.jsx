@@ -7,19 +7,36 @@ import Levis from '../../img/brands/Levis.png'
 import Amazon from '../../img/brands/Amazon.png'
 
 import gsap from 'gsap';
-import { useLayoutEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
+
 const Brands = () => {
+  const brandsRef = useRef(null);
 
-  const brands = useRef(null);
+  useEffect(() => {
+    const brandsElement = brandsRef.current;
 
-  useLayoutEffect(() => {
-    gsap.fromTo(brands.current, {opacity: 0, y: 25}, {opacity: 1, y: 0})
-  }, [])
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          gsap.fromTo(brandsElement, {opacity: 0, y: 25}, {opacity: 1, y: 0});
+        }
+      });
+    });
 
+    if (brandsElement) {
+      observer.observe(brandsElement);
+    }
+
+    return () => {
+      if (brandsElement) {
+        observer.unobserve(brandsElement);
+      }
+    };
+  }, []);
 
   return (
-    <section className="brands">
-      <div className="container" ref={brands}>
+    <section className="brands" ref={brandsRef}>
+      <div className="container">
         <ul className="brands__list">
           <li className="brands__list-item"><img src={HM} alt="brand_image" /></li>
           <li className="brands__list-item"><img src={Obey} alt="brand_image" /></li>
