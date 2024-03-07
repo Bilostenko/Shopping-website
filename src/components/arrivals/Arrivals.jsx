@@ -9,31 +9,38 @@ const Arrivals = ({ title, cardData, animationParams }) => {
 
   useEffect(() => {
     const arrivalsElement = arrivalsRef.current;
-  
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           if (animationParams) {
-            gsap.from(arrivalsElement, {
+            gsap.fromTo(arrivalsElement, {
               ...animationParams,
-              delay: 0.5
+              delay: 1,
+              scale: 0.1, 
+              rotation: animationParams.rotation || 0 
+            }, {
+              scale: 1, 
+              rotation: 0,
+              duration: animationParams.duration * 0.5
             });
           }
         }
       });
     });
-  
+
     if (arrivalsElement) {
       observer.observe(arrivalsElement);
     }
-  
+
     return () => {
       if (arrivalsElement) {
         observer.unobserve(arrivalsElement);
       }
     };
   }, [animationParams]);
-  
+
+
 
 
   return (

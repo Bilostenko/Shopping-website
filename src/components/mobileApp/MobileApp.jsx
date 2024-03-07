@@ -2,7 +2,46 @@ import './mobileApp.css'
 import mobile_phone from '../../img/images/vouchers-img.png'
 import apple from '../../img/icons/app-store.png'
 import google from '../../img/icons/google-play.png'
+
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
+
 const MobileApp = () => {
+
+  const mobileAppRef = useRef(null);
+
+  useEffect(() => {
+    const mobileAppElement = mobileAppRef.current;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          gsap.from('.mobileApp__title', {
+            opacity: 0,
+            x: -50,
+            delay: 0.5
+          });
+          gsap.from('.mobileApp__IMG', {
+            opacity: 0,
+            x: 50,
+            delay: 0.5
+          });
+        }
+      });
+    });
+
+    if (mobileAppElement) {
+      observer.observe(mobileAppElement);
+    }
+
+    return () => {
+      if (mobileAppElement) {
+        observer.unobserve(mobileAppElement);
+      }
+    };
+  }, []);
+
+
   return (
     <section className="mobileApp">
       <div className="container-small">

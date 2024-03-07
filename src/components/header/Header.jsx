@@ -24,7 +24,7 @@ function Header() {
           });
           gsap.fromTo(
             '.header__logo',
-            { scale: 0.8 }, 
+            { scale: 0.1 }, 
             { duration: 1, scale: 1, ease: 'power3.out' }
           );
           observer.unobserve(entry.target); 

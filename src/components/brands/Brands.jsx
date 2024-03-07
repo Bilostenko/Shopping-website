@@ -18,7 +18,7 @@ const Brands = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          gsap.fromTo(brandsElement, {opacity: 0, y: 25}, {opacity: 1, y: 0});
+          gsap.fromTo(brandsElement, {opacity: 0, y: 25}, {opacity: 1, y: 0, delay: 0.2});
         }
       });
     });
