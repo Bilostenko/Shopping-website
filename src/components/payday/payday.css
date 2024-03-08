@@ -20,7 +20,7 @@
 }
 
 .payday__title {
-  font-size: 96px;
+  font-size: clamp(3.125rem, 2.55rem + 2.88vw, 6rem);
   line-height: calc(132 / 96);
   font-weight: 900;
 }

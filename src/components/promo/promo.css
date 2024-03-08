@@ -13,7 +13,7 @@
 }
 
 .promo__title {
-  font-size: 96px;
+  font-size: clamp(3.125rem, 2.55rem + 2.88vw, 6rem);
   line-height: calc(120 / 96);
   font-weight: 900;
   max-width: 480px;
