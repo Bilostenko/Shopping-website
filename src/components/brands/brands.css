@@ -1,13 +1,52 @@
-.brands{
+.brands {
   padding: 60px 0 55px;
   background-color: var(--yellow);
   margin-bottom: 120px;
 }
 
-.brands__list{
+.brands__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 120px;
   mix-blend-mode: multiply;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 1700px) {
+  .brands__list {
+    column-gap: 95px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .brands__list {
+    column-gap: 30px;
+  }
+
+  .brands__list {
+    gap: 0px;
+  }
+
+  .arrivals__content {
+    gap: 5px;
+  }
+
+  .arrivals__content {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .brands {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 565px) {
+  .title2::after {
+    display: none;
+  }
 }

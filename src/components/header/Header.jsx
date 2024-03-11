@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './header.css';
 import logoIMG from '../../img/icons/logo.svg';
 import gsap from 'gsap';
+import { Menu, Drawer, Button } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
 
 function Header() {
   const headerRef = useRef(null);
+
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const headerElement = headerRef.current;
@@ -24,10 +28,10 @@ function Header() {
           });
           gsap.fromTo(
             '.header__logo',
-            { scale: 0.1 }, 
+            { scale: 0.1 },
             { duration: 1, scale: 1, ease: 'power3.out' }
           );
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.5 });
@@ -42,6 +46,14 @@ function Header() {
       }
     };
   }, []);
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
 
 
   return (
@@ -61,6 +73,29 @@ function Header() {
               <li><a href="!#" className='header__nav-sign btn'>SIGN UP</a></li>
             </ul>
           </nav>
+          <div className="header__burger" >
+            <Button type="primary" onClick={showDrawer}>
+              <MenuOutlined />
+            </Button>
+          </div>
+          <Drawer
+            title="Menu"
+            placement="right"
+            closable={false}
+            onClose={onClose}
+            visible={visible}
+            
+          >
+            <Menu mode="vertical" className='burger-list'>
+              <Menu.Item key="1">CATALOGUE</Menu.Item>
+              <Menu.Item key="2">FASHION</Menu.Item>
+              <Menu.Item key="3">FAVOURITE</Menu.Item>
+              <Menu.Item key="4">LIFESTYLE</Menu.Item>
+              <Menu.Item key="5">
+                <a href="!#" className="header__nav-sign btn">SIGN UP</a>
+              </Menu.Item>
+            </Menu>
+          </Drawer>
         </div>
       </div>
     </header>
