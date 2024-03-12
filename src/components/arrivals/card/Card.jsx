@@ -6,7 +6,7 @@ const Card = (props) => {
   const { title, img } = props
 
   return (
-    <div className="arrivals__content">
+    <div className="arrivals__content arrivals__content-2">
       <div className="arrivals__card">
         <img className="arrivals__card-img" src={img} alt="Hoodies" />
         <div className="arrival__card-body">

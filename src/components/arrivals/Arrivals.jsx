@@ -50,7 +50,7 @@ const Arrivals = ({ title, cardData, animationParams }) => {
           <div className="arrivals__header">
             <h2 className="title2">{title}</h2>
           </div>
-          <div className="arrivals__content">
+          <div className="arrivals__content arrivals__content-2">
             {cardData.map((card, index) => (
               <Card key={index} title={card.titleCard} img={card.img} />
             ))}
