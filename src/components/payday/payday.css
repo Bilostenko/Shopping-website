@@ -113,26 +113,23 @@
   }
 
   .payday__title-highlight::before {
-    opacity: 0.3;
+    display: none;
   }
 }
 
 @media (max-width: 350px) {
   .payday__text {
-       padding-bottom: 95px;
+    padding-bottom: 95px;
   }
 
 }
-@media (max-width: 660px) {
-  .container{
-    padding: 5px;
-  }
-}
+
 @media (max-width: 1200px) {
-  .payday{
+  .payday {
     margin-bottom: 40px;
   }
 }
+
 @media (max-width: 1000px) {
   .arrivals__content-2 {
     margin: 0 auto;

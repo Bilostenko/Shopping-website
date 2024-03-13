@@ -53,23 +53,34 @@
 }
 
 @media (max-width: 1570px) {
-  .mobileApp__title{
+  .mobileApp__title {
     padding: 0px 0px 147px 0;
   }
 }
+
 @media (max-width: 1260px) {
-  .mobileApp__content{
+  .mobileApp__content {
     justify-content: center;
   }
-  .mobileApp{
+
+  .mobileApp {
     margin-bottom: 10px;
   }
 }
+
 @media (max-width: 580px) {
-  .mobileApp__btn_wrapper{
+  .mobileApp__btn_wrapper {
     flex-direction: column;
   }
-  .container-small{
+
+  .container-small {
     padding-right: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .mobileApp__title span {
+    font-size: 39px;
+    line-height: 110%;
   }
 }

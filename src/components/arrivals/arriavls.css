@@ -32,6 +32,23 @@
   justify-content: space-between;
 }
 
+
+@media (max-width: 1750px) {
+  .arrivals__content-2 {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .arrivals__card,
+  .arrivals__card-img {
+    width: 100%;
+  }
+
+}
+
 @media (max-width: 550px) {
   .arrivals__content {
     max-width: 350px;
@@ -41,21 +58,4 @@
   .arrivals__card-img {
     width: 100%;
   }
-}
-
-@media (max-width: 1750px) {
-  .arrivals__content-2 {
-    justify-content: center;
-  }
-
-}
-@media (max-width: 1000px) {
-  .arrivals__card,
-  .arrivals__card-img {
-    width: 100%;
-  }
-  .arrivals__content-2{
-    width: clamp(20rem, 13.563rem + 32.19vw, 52.188rem);
-  }
-
 }

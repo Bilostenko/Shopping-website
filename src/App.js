@@ -39,7 +39,7 @@ function App() {
       />
       <MobileApp />
       < Feedback />
-      < Footer />
+      {/* < Footer /> */}
     </div>
   );
 }

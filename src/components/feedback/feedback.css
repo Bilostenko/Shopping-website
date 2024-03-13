@@ -90,7 +90,7 @@
 @media (max-width: 490px) {
   .feedback__form{
     margin-bottom: 55px;
-    max-width: 420px;
+    max-width: 230px;
     margin-bottom: 80px;
    }
    .feedback__form button{
@@ -98,15 +98,11 @@
     margin-left: 30%;
    }
    .feedback__form input{
-    max-width: 300px;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 7%;
+    height: 50px;
    }
 }
 @media (max-width: 490px){
-  .feedback__form {
-    max-width: 350px;
-   }
-  .feedback__form input {
-    max-width: 270px;
-   }
+
 }
