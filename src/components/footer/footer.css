@@ -60,3 +60,53 @@
   letter-spacing: 0.02em;
   color: #d9d9d9;
 }
+
+@media (max-width: 1500px) {
+  .footer__social {
+    padding-right: 150px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .footer__wrapper {
+    /* flex-wrap: wrap; */
+    padding: 119px 50px 147px 20px;
+    /* justify-content: center; */
+  }
+
+  /* .footer__social{
+    margin-bottom: 40px;
+    display: flex;
+  }
+  .footer__contacts{
+    column-gap: 220px;
+  } */
+}
+
+@media (max-width: 1040px) {
+  .footer__social {
+    padding-right: 40px;
+  }
+
+  .footer__contacts {
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 780px) {
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__contacts {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 505px) {
+  .footer__contacts{
+    display: flex;
+    flex-direction: column;
+  }
+}
