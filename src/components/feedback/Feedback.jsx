@@ -6,7 +6,7 @@ const Feedback = () => {
         <h2 className="feedback__title">JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO</h2>
         <p className="feedback__desc">Type your email down below and be young wild generation</p>
         <div className='feedback__form'>
-          <input type="email" placeholder="Add your email here" />
+          <input type="email" placeholder="Add your email" />
           <button type="submit">SEND</button>
         </div>
       </div>

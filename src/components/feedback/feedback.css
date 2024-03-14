@@ -102,7 +102,8 @@
     margin-left: 7%;
     height: 50px;
    }
-}
-@media (max-width: 490px){
-
+   .feedback__form input[type="email"]::placeholder {
+    max-width: 27ch; 
+  }
+  
 }

@@ -3,47 +3,10 @@ import mobile_phone from '../../img/images/vouchers-img.png'
 import apple from '../../img/icons/app-store.png'
 import google from '../../img/icons/google-play.png'
 
-import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
-
 const MobileApp = () => {
 
-  const mobileApp_ref = useRef(null);
-
-  useEffect(() => {
-    const mobileAppElement = mobileApp_ref.current;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          gsap.from('.mobileApp__title', {
-            opacity: 0,
-            x: -90,
-            delay: 1
-          });
-          gsap.from('.mobileApp__IMG', {
-            opacity: 0,
-            x: 90,
-            delay: 1
-          });
-        }
-      });
-    });
-
-    if (mobileAppElement) {
-      observer.observe(mobileAppElement);
-    }
-
-    return () => {
-      if (mobileAppElement) {
-        observer.unobserve(mobileAppElement);
-      }
-    };
-  }, []);
-
-
   return (
-    <section className="mobileApp" ref={mobileApp_ref}>
+    <section className="mobileApp" >
       <div className="container-small">
         <div className="mobileApp__content">
           <div className="mobileApp__text">

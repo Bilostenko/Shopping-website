@@ -9,12 +9,13 @@ const Arrivals = ({ title, cardData, animationParams }) => {
 
   useEffect(() => {
     const arrivalsElement = arrivalsRef.current;
-
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (animationParams) {
-            gsap.fromTo(arrivalsElement, {
+          const screenWidth = window.innerWidth;
+          if (screenWidth > 1540 && animationParams) {
+            gsap.fromTo(entry.target, {
               ...animationParams,
               delay: 1,
               scale: 0.1, 
@@ -28,20 +29,22 @@ const Arrivals = ({ title, cardData, animationParams }) => {
         }
       });
     });
-
+  
     if (arrivalsElement) {
       observer.observe(arrivalsElement);
+      const cards = arrivalsElement.querySelectorAll('.card');
+      cards.forEach(card => observer.observe(card));
     }
-
+  
     return () => {
       if (arrivalsElement) {
         observer.unobserve(arrivalsElement);
+        const cards = arrivalsElement.querySelectorAll('.card');
+        cards.forEach(card => observer.unobserve(card));
       }
     };
   }, [animationParams]);
-
-
-
+  
 
   return (
     <section className="arrivals" ref={arrivalsRef}>

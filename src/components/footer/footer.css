@@ -105,8 +105,15 @@
 }
 
 @media (max-width: 505px) {
-  .footer__contacts{
+  .footer__contacts {
     display: flex;
     flex-direction: column;
   }
+
+  .footer__wrapper {
+    padding: 15px 0px 40px 4px
+  }
+  .container {
+    padding: 0px;
+  };
 }

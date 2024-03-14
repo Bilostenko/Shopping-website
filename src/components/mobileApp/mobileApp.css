@@ -72,10 +72,6 @@
   .mobileApp__btn_wrapper {
     flex-direction: column;
   }
-
-  .container-small {
-    padding-right: 10px;
-  }
 }
 
 @media (max-width: 350px) {

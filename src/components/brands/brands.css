@@ -20,9 +20,9 @@
   }
 }
 
-@media (max-width: 1536px) {
-  .brands__list {
-    column-gap: 30px;
+@media (max-width: 1540px) {
+  .brands {
+    margin-bottom: 0px;;
   }
 
   .brands__list {
