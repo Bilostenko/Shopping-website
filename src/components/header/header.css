@@ -76,6 +76,10 @@ body {
   font-size: 34px !important;
 }
 
+.drawer-close-button {
+  background-color: black;
+  color: white;
+}
 
 @media (max-width: 1200px) {
   .header__nav>ul {
@@ -122,6 +126,10 @@ body {
     font-size: 24px;
     width: 55px;
     height: 55 px;
+  }
+
+  .header {
+    padding: 46px 15px 56px;
   }
 
   .header__logo>span {

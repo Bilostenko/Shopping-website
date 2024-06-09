@@ -16,6 +16,7 @@
   flex-direction: column;
   max-width: 415px;
   padding-right: 455px;
+  padding: 15px;
 }
 
 .footer__social-title {
@@ -42,6 +43,7 @@
 .footer__contacts {
   display: flex;
   column-gap: 90px;
+  padding: 15px;
 }
 
 .footer__column>ul>li>a {

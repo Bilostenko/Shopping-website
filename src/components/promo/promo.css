@@ -99,6 +99,9 @@
 
 @media (max-width: 550px) {
   .promo__content{
-    padding-left: 0px;
+    padding-left: 25px;
+  }
+  .promo{
+    padding: 0px 15px 0px;
   }
 }

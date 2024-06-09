@@ -23,6 +23,7 @@
   font-size: clamp(3.125rem, 2.55rem + 2.88vw, 6rem);
   line-height: calc(132 / 96);
   font-weight: 900;
+  padding: 15px
 }
 
 .payday__title-highlight {

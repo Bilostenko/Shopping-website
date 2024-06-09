@@ -55,7 +55,6 @@ function Header() {
     setVisible(false);
   };
 
-
   return (
     <header className='header' ref={headerRef}>
       <div className="container">
@@ -73,7 +72,7 @@ function Header() {
               <li><a href="!#" className='header__nav-sign btn'>SIGN UP</a></li>
             </ul>
           </nav>
-          <div className="header__burger" >
+          <div className="header__burger">
             <Button type="primary" onClick={showDrawer}>
               <MenuOutlined />
             </Button>
@@ -84,7 +83,6 @@ function Header() {
             closable={false}
             onClose={onClose}
             visible={visible}
-            
           >
             <Menu mode="vertical" className='burger-list'>
               <Menu.Item key="1">CATALOGUE</Menu.Item>
@@ -95,6 +93,9 @@ function Header() {
                 <a href="!#" className="header__nav-sign btn">SIGN UP</a>
               </Menu.Item>
             </Menu>
+            <Button type="dashed" onClick={onClose} className="drawer-close-button">
+             Х
+            </Button>
           </Drawer>
         </div>
       </div>
